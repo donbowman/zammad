@@ -9,4 +9,10 @@ when 'postgresql'
   Rails.application.config.db_case_sensitive = true
   Rails.application.config.db_like = 'ILIKE'
   Rails.application.config.db_null_byte = false
+when 'cockroachdb'
+  Rails.application.config.db_4bytes_utf8 = true
+  Rails.application.config.db_case_sensitive = true
+  Rails.application.config.db_like = 'ILIKE'
+  Rails.application.config.db_null_byte = false
+
 end
