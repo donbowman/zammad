@@ -63,11 +63,11 @@ class InitializeKnowledgeBase < ActiveRecord::Migration[5.0]
       t.text    :internal_note, null: true,  limit: 1.megabyte
       t.integer :position,      null: false, index: true
 
-      t.timestamp  :archived_at,  limit: 3, null: true
+      t.timestamp  :archived_at,            null: true
       t.references :archived_by,  foreign_key: { to_table: :users }
-      t.timestamp  :internal_at,  limit: 3, null: true
+      t.timestamp  :internal_at,            null: true
       t.references :internal_by,  foreign_key: { to_table: :users }
-      t.timestamp  :published_at, limit: 3, null: true
+      t.timestamp  :published_at,           null: true
       t.references :published_by, foreign_key: { to_table: :users }
 
       t.timestamps null: false

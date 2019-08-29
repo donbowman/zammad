@@ -10,7 +10,7 @@ class AddTicketTimeAccounting373 < ActiveRecord::Migration[4.2]
       t.references :ticket_article,                               null: true
       t.column :time_unit,      :decimal, precision: 6, scale: 2, null: false
       t.column :created_by_id,  :integer,                         null: false
-      t.timestamps limit: 3, null: false
+      t.timestamps null: false
     end
     add_index :ticket_time_accountings, [:ticket_id]
     add_index :ticket_time_accountings, [:ticket_article_id]

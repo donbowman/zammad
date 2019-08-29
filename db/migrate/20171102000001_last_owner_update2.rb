@@ -12,7 +12,7 @@ class LastOwnerUpdate2 < ActiveRecord::Migration[5.1]
 
     # check if column already exists
     if !ActiveRecord::Base.connection.column_exists?(:tickets, :last_owner_update_at)
-      add_column :tickets, :last_owner_update_at, :timestamp, limit: 3, null: true
+      add_column :tickets, :last_owner_update_at, :timestamp, null: true
       add_index :tickets, [:last_owner_update_at]
       Ticket.reset_column_information
     end
