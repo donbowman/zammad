@@ -20,6 +20,7 @@ gem 'unicorn', group: :unicorn
 gem 'activerecord-nulldb-adapter', group: :nulldb
 gem 'mysql2', '0.4.10', group: :mysql
 gem 'pg', '0.21.0', group: :postgres
+gem 'activerecord-cockroachdb-adapter', '0.2.3', group: :cockroachdb
 
 # core - asynchrous task execution
 gem 'daemons'
